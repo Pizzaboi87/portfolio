@@ -1,0 +1,624 @@
+.answer {
+    background-color: #ffd52e;
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    border-radius: 5px;
+}
+
+.answer > h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    padding-bottom: 2vw;
+}
+
+.contact {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.contact--container {
+    position: relative;
+    width: 50%;
+    top: 10%;
+    left: 2%;
+    z-index: 0;
+}
+
+.contact--frame {
+    width: 95%;
+    padding-top: 6%;
+    padding-left: 5%;
+}
+  
+.contact--bag{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    max-height: 100%;
+}
+
+.openedbag {
+    transform: translateY(150vh);
+    transition: transform 350ms ease-in-out;
+}
+
+.contactwave {
+    pointer-events: none;
+}
+
+.error {
+    color:#ffd52e;
+    background-color: red;
+    display: block;
+    position: absolute;
+    left: 120%;
+    width: 50%;
+    font-size: 1vw;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 1vw;
+}
+
+.errorfname {
+    top: 15.5%;
+}
+
+.errorlname {
+    top: 30.5%;
+}
+
+.erroremail {
+    top: 45.5%;
+}
+
+.errormessage{
+    top: 74.5%;
+}
+
+.contact--item {
+    position: absolute;
+    display: block;
+}
+
+.logo {
+    font-size: 4vw;
+    color: grey;
+}
+
+.form--item {
+    border: none;
+    border-radius: 5px;
+    padding: 1%;
+    font-size: 1vw;
+    background-color: grey;
+    font-family: 'Orbitron', sans-serif;
+    width: 45%;
+}
+
+.formlabel {
+    font-size: 1.5vw;
+    width: 50%;
+    left: 120%;
+    font-family: 'Orbitron', sans-serif;
+    transform: scale(0);
+    transition: transform 1000ms ease-in-out;
+}
+
+::placeholder {
+    color:darkslategray;
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+::-ms-input-placeholder {
+    color: darkslategray;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.label--fname {
+    top: 5%;
+}
+
+#fname {
+    top: 44%;
+    left: 6%;
+    transform: rotate(-90deg);
+}
+  
+.anim_fname {
+    animation: fname 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fname {
+    100%{
+        top: 10%;
+        left: 120%;
+        width: 50%;
+        transform: rotate(0deg);
+        background-color: yellowgreen;
+    }
+}
+
+.label--lname {
+    top: 20%;
+}
+  
+#lname {
+    left: 25%;
+    top: 44%;
+    transform: rotate(90deg);
+}
+  
+.anim_lname {
+    animation: lname 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lname {
+    100%{
+        top: 25%;
+        left: 120%;
+        width: 50%;
+        transform: rotate(0deg);
+        background-color: yellowgreen;
+    }
+}
+  
+.label--email {
+    top: 35%;
+}
+  
+#email {
+    left: 34%;
+    top: 44%;
+    transform: rotate(-90deg);
+}
+  
+.anim_email {
+    animation: email 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes email {
+    100%{
+        top: 40%;
+        left: 120%;
+        width: 50%;
+        transform: rotate(0deg);
+        background-color: yellowgreen;
+    }
+}
+  
+.label--message {
+    top: 50%;
+}
+  
+#message {
+    left: 55%;
+    top: 39%;
+    height: 17%;
+    transform: rotate(-90deg);
+}
+  
+.anim_message {
+    animation: message 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes message {
+    100%{
+        top: 55%;
+        left: 120%;
+        width: 50%;
+        height: 20%;
+        transform: rotate(0deg);
+        background-color: yellowgreen;
+    }
+}
+  
+#submit {
+    left: 16%;
+    top: 81%;
+    width: 17%;
+    height: 8%;
+    cursor: pointer;
+    color: darkslategray;
+}
+  
+.anim_submit {
+    animation: submit 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes submit {
+    100%{
+        top: 80%;
+        left: 120%;
+        background-color: green;
+        color: whitesmoke;
+    }
+}
+
+#submit:active {
+    box-shadow: inset 5px 5px 5px -3px rgba(0, 0, 0, 0.7);
+}
+
+#linkedin {
+    top: 77%;
+    left: 47.5%;
+}
+  
+.anim_linkedin {
+    animation: linkedin 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes linkedin {
+    100%{
+        top: 9.5%;
+        left: 180%;
+        color: #0072b1;
+    }
+}
+
+#facebook {
+    top: 77%;
+    left: 74.5%;
+}
+  
+.anim_facebook {
+    animation: facebook 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes facebook {
+    100%{
+        top: 37.5%;
+        left: 180%;
+        color: #4267B2;
+    }
+}
+
+#github {
+    top: 41%;
+    left: 15%;
+}
+  
+.anim_github{
+    animation: github 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes github {
+    100%{
+        top: 23%;
+        left: 180%;
+        color: #333333;
+    }
+}
+
+#letter {
+    top: 20.5%;
+    left: 15%;
+}
+  
+.anim_letter {
+    animation: mail 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mail {
+    100%{
+        top: 52%;
+        left: 180%;
+        color:forestgreen;
+    }
+}
+  
+#phone {
+    top: 60.5%;
+    left: 15%;
+}
+  
+.anim_phone {
+    animation: phone 1s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes phone {
+    100%{
+        top: 66%;
+        left: 180%;
+        color:mediumvioletred;
+    }
+}
+
+.icon:hover {
+    transform: translateY(-15%);
+    transition: 0.5s ease-in-out;
+    text-shadow: 25px 20px 20px #333333;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1000px) and (orientation: portrait) {
+    .answer {
+        width: 100%;
+        height: 50%;
+        left: 0;
+        top: 25%;
+    }
+
+    .answer > h1 {
+        font-size: 6vw;
+        padding-bottom: 4vw;
+    }
+    
+    #contact {
+        height: 220vw;
+    }
+
+    .contact {
+        overflow-y: hidden;
+    }
+    
+    .contact--container {
+        width: 85%;
+        top: 15%;
+        left: 8%;
+    }
+
+    .contact--frame {
+        width: 100%;
+        padding-top: 0%;
+        padding-left: 0%;
+    }
+
+    .contact--bag {
+        top: -10%;
+        max-height: 110%;
+    }
+
+    .anim_frame {
+        animation: mobileframe 1s ease-in-out;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+  
+    @keyframes mobileframe {
+        100% {
+            transform: translateX(-100vw);
+        }
+    }
+
+    .error {
+        left: 2.5vw;
+        width: 80vw;
+        font-size: 3vw;
+    }
+
+    .errorfname {
+        top: 0;
+    }
+    
+    .errorlname {
+        top: 20vw;
+    }
+    
+    .erroremail {
+        top: 40vw;
+    }
+    
+    .errormessage {
+        top: 90vw;
+    }
+
+    #fname {
+        top: 40%;
+        left: 4%;
+    }
+    
+    @keyframes fname {
+        100% {
+            top: -10vw;
+            left: 2.5vw;
+            width: 80vw;
+            height: 10vw;
+            font-size: 4.5vw;
+            transform: rotate(0deg);
+            background-color: yellowgreen;
+        }
+    }
+
+    #lname {
+        left: 24%;
+        top: 40%;
+    }
+      
+    @keyframes lname {
+        100% {
+            top: 10vw;
+            left: 2.5vw;
+            width: 80vw;
+            height: 10vw;
+            font-size: 4.5vw;
+            transform: rotate(0deg);
+            background-color: yellowgreen;
+        }
+    }
+
+    #email {
+        left: 36%;
+        top: 40%;
+    }
+      
+    @keyframes email {
+        100% {
+            top: 30vw;
+            left: 2.5vw;
+            width: 80vw;
+            height: 10vw;
+            font-size: 4.5vw;
+            transform: rotate(0deg);
+            background-color: yellowgreen;
+        }
+    }
+
+    #message {
+        left: 58%;
+        top: 32.5%;
+        height: 18%;
+    }
+      
+    @keyframes message {
+        100% {
+            top: 50vw;
+            left: 2.5vw;
+            width: 80vw;
+            height: 40vw;
+            font-size: 4.5vw;
+            transform: rotate(0deg);
+            background-color: yellowgreen;
+        }
+    }
+
+    #submit {
+        left: 13%;
+        top: 79%;
+    }
+      
+    @keyframes submit {
+        100% {
+            top: 95vw;
+            left: 2.5vw;
+            height: 10vw;
+            width: 30vw;
+            font-size: 4vw;
+            background-color: green;
+            color: whitesmoke;
+        }
+    }
+      
+    #linkedin {
+        top: 75.5%;
+        left: 47%;
+    }
+    
+    @keyframes linkedin {
+        100% {
+            font-size: 15.5vw;
+            top: 115vw;
+            left: -0.5vw;
+            color: #0072b1;
+        }
+    }
+
+    #github{
+        top: 36%;
+        left: 11.5%;
+    }
+      
+    @keyframes github {
+        100%{
+            font-size: 15.5vw;
+            top: 115vw;
+            left: 17.5vw;
+            color: #333333;
+        }
+    }
+      
+    #facebook{
+        top: 75.5%;
+        left: 77%;
+    }
+    
+    @keyframes facebook {
+        100%{
+            font-size: 15.5vw;
+            top: 115vw;
+            left: 35.5vw;
+            color: #4267B2;
+        }
+    }
+
+    #letter{
+        top: 14%;
+        left: 11.5%;
+    }
+      
+    @keyframes mail {
+        100%{
+            font-size: 15.5vw;
+            top: 115vw;
+            left: 53.5vw;
+            color:forestgreen;
+        }
+    }
+
+    #phone{
+        top: 57.5%;
+        left: 11.5%;
+    }
+      
+    @keyframes phone {
+        100%{
+            font-size: 15.5vw;
+            top: 115vw;
+            left: 71.5vw;
+            color:mediumvioletred;
+        }
+    }
+      
+    .formlabel{
+        font-size: 1em;
+        width: 50%;
+        left: 2.5vw;
+        transform: scale(0);
+        transition: transform 1000ms ease-in-out;
+    }
+      
+    .label--fname{
+        top: -15vw;
+        font-size: 4vw;
+    }
+      
+    .label--lname{
+        top: 5vw;
+        font-size: 4vw;
+    }
+        
+    .label--email{
+        top: 25vw;
+        font-size: 4vw;
+    }
+        
+    .label--message{
+        top: 45vw;
+        font-size: 4vw;
+    }
+}

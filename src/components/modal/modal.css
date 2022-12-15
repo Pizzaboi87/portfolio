@@ -1,0 +1,234 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000;
+    animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+@keyframes unfoldIn {
+    0% {
+      transform:scaleY(.005) scaleX(0);
+    }
+    50% {
+      transform:scaleY(.005) scaleX(1);
+    }
+    100% {
+      transform:scaleY(1) scaleX(1);
+    }
+}
+
+.closedmodal {
+    animation: unfoldOut 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+@keyframes unfoldOut {
+    0% {
+      transform:scaleY(1) scaleX(1);
+    }
+    50% {
+      transform:scaleY(.005) scaleX(1);
+    }
+    100% {
+      transform:scaleY(.005) scaleX(0);
+    }
+}
+
+.openedmodal {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 12.5%;
+    left: 12.5%;
+    width: 75%;
+    height: 75%;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas: 
+    "title title title"
+    "pics details details"
+    ". close .";
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 10px;
+    transform:scale(0);
+    animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+      transform:scale(0);
+    }
+    100% {
+      transform:scale(1);
+    }
+}
+
+.close {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+    font-size: 2vw;
+    color: midnightblue;
+}
+
+.close:hover {
+    transform: scale(1.5);
+    transition: 1s ease-in-out;
+}
+
+.modal > h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: midnightblue;
+    text-shadow: 1px 1px gainsboro;
+    padding-top: 2%;
+    grid-area: title;
+}
+
+.modalbutton {
+    grid-area: close;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1vw;
+    justify-self: center;
+    margin-block: 0.5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: moccasin;
+    color: midnightblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modalbutton:active {
+    box-shadow: inset 5px 5px 5px -3px rgba(0, 0, 0, 0.7);
+}
+
+.details--pics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: pics;
+}
+
+.details--pics > img {
+    width: 80%;
+    height: auto;
+}
+
+.details--text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: justify;
+    padding: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2vw;
+    grid-area: details;
+}
+
+.details--text > h2 {
+    margin-bottom: -2vw;
+}
+
+.details--link {
+    display: flex;
+}
+
+.link {
+    font-size: 3vw;
+    color: midnightblue;
+}
+
+.details--link > a {
+    color: midnightblue;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+}
+
+.details--link > a > h4 {
+    float: right;
+    padding-left: 0.5vw;
+    padding-right: 1vw;
+}
+
+@media only screen and (max-width: 1000px) and (orientation: portrait) {
+    .modal {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 8fr 1fr;
+        grid-template-areas: 
+        "title"
+        "pics"
+        "details"
+        "close";
+        width: 90%;
+        height: 85%;
+        left: 5%;
+        top: 7.5%;
+    }
+
+    .close {
+        top: 4vw;
+        right: 4vw;
+        font-size: 6vw;
+    }
+
+    .modal > h1 {
+        font-size: 5vw;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .modalbutton {
+        font-size: 5vw;
+    }
+
+    .details--pics {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2%;
+        margin-top: 5vw;
+    }
+
+    .details--pics > img {
+        max-width: 45%;
+        width: auto;
+        max-height: 35vw;
+        margin-bottom: 2%;
+    }
+
+    .details--text {
+        font-size: 3vw;
+    }
+
+    .details--text > h2 {
+        margin-bottom: initial;
+        margin-top: -5vw;
+    }
+
+    .details--text > p {
+        padding-block: 3vw;
+    }
+
+    .link {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+    .details--text {
+        font-size: 4vw;
+    }
+}
+
+

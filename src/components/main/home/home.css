@@ -1,0 +1,115 @@
+.home--container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.atat--container {
+    position: relative;
+    width: 30%;
+}
+
+.text--container {
+    position: relative;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.text--container > p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-size: 1.4vw;
+    margin-bottom: 2vw;
+}
+
+.atat {
+    position: absolute;
+    transform: rotate(5deg);
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    height: 75%;
+}
+
+.firstwave {
+    z-index: 1;
+}
+
+.leg {
+    z-index: 2;
+}
+
+.one {
+    display: none;
+    animation: shoot-one 1s;
+    animation-iteration-count: 2;
+}
+
+.two {
+    display: none;
+    animation: shoot-two 0.7s;
+    animation-iteration-count: 2;
+}
+
+@keyframes shoot-one {
+    100% {
+        transform: translateX(-210%) translateY(-70%) rotate(5deg);
+    }
+}
+  
+@keyframes shoot-two {
+    100% {
+        transform: translateX(-210%) translateY(-70%) rotate(5deg);
+    }
+}
+
+.resume {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    z-index: 5;
+}
+
+.resume > i {
+    font-size: 4vw;
+}
+
+@media only screen and (max-width: 1000px) and (orientation: portrait) {
+    .home--container {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .atat--container {
+        width: 100%;
+        max-height: 40vh;
+    }
+
+    .text--container {
+        width: 100%;
+        max-height: 60vh;
+        margin-top: 15vh;
+    }
+
+    .text--container > p {
+        font-size: 3.2vw;
+    }
+
+    .atat {
+        height: 35vh;
+    }
+
+    .resume {
+        font-size: 3vw;
+    }
+
+    .resume > i {
+        font-size: 10vw;
+    }
+}

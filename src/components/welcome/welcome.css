@@ -1,0 +1,101 @@
+.welcome--background::before{
+    content: '';
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(transparent, #29bdc1);
+}
+
+.welcome--background {
+    max-width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url('../../assets/background.jpeg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.welcome--peter, .welcome--dev, .welcome--learn{
+    position: absolute;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: midnightblue;
+    text-shadow: 3px 3px rgb(163, 190, 213);
+    left: 50%;
+    width: 100%;
+}
+
+.welcome--peter {
+    transform: translate(-50%, 25vh);
+    font-size: 10vw;
+}
+
+.welcome--dev {
+    transform: translate(-30%, 50vh);
+    font-size: 3vw;
+}
+
+.welcome--learn {
+    transform: translate(-50%, 80vh);
+    font-size: 3vw;
+    z-index: 10;
+}
+
+.welcome--link {
+    text-decoration: none;
+    color: midnightblue;
+}
+
+.welcome--link:hover {
+    color: white;
+}
+
+.welcome--tie, .welcome--xwing {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+
+.welcome--xwing {
+    transform: translateX(-120%);
+}
+
+.welcome--tie {
+    transform: translateX(-150%);
+}
+
+@media only screen and (max-width: 1000px) and (orientation: portrait) {
+    .welcome--background::before {
+        all: unset;
+    }
+
+    .welcome--peter {
+        transform: translate(-50%, 35vh);
+        font-size: 14vw;
+    }
+
+    .welcome--dev {
+        transform: translate(-50%, 50vh);
+        font-size: 7vw;
+    }
+
+    .welcome--learn {
+        transform: translate(-50%, 80vh);
+        font-size: 7vw;
+    }
+
+    .welcome--tie, .welcome--xwing {
+        width: 200%;
+        top: 40%;
+    }
+
+    .welcome--xwing {
+        transform: translateX(-70%);
+    }
+    
+    .welcome--tie {
+        transform: translateX(-100%);
+    }
+}
