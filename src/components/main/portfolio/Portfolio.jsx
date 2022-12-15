@@ -1,8 +1,8 @@
 import { useEffect, useRef,useState } from 'react'
 import Links from '../links/Links'
 import data from '../links/data'
-import batman_sign from '../../../assets/batman.png'
-import joker_figure from '../../../assets/joker.png'
+import batman_sign from '../../../assets/batman.webp'
+import joker_figure from '../../../assets/joker.webp'
 import wave3 from '../../../assets/wave3.svg'
 import './portfolio.css'
 

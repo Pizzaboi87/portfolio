@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react'
-import img_tie from '../../assets/tie.png'
-import img_xwing from '../../assets/xwing.png'
+import img_tie from '../../assets/tie.webp'
+import img_xwing from '../../assets/xwing.webp'
 import './welcome.css'
 
 const Welcome = () => {

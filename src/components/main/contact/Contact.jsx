@@ -1,6 +1,6 @@
 import wave4 from '../../../assets/wave4.svg'
-import frame_image from '../../../assets/frame-big-final.png'
-import bag_image from '../../../assets/bag-final.png'
+import frame_image from '../../../assets/frame-big-final.webp'
+import bag_image from '../../../assets/bag-final.webp'
 import { useEffect, useRef, useState } from 'react'
 import { useForm } from "react-hook-form"
 import emailjs from '@emailjs/browser'

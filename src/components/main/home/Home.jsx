@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
-import atat from '../../../assets/atat-total.png'
-import atat_leg from '../../../assets/atat-leg.png'
+import atat from '../../../assets/atat-total.webp'
+import atat_leg from '../../../assets/atat-leg.webp'
 import wave1 from '../../../assets/wave1.svg'
-import laser_one from '../../../assets/laser-1.png'
-import laser_two from '../../../assets/laser-2.png'
+import laser_one from '../../../assets/laser-1.webp'
+import laser_two from '../../../assets/laser-2.webp'
 import './home.css'
 
 const Home = () => {
