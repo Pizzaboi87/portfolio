@@ -49,7 +49,7 @@
     left: 0;
     z-index: 4;
     width: 100%;
-    max-height: 100%;
+    height: 100%;
 }
 
 .openedbag {
@@ -400,8 +400,10 @@
     }
 
     .contact--bag {
-        top: -10%;
-        max-height: 110%;
+        top: -4vw;
+        left: -2.5vw;
+        width: 105%;
+        height: 105%;
     }
 
     .anim_frame {
@@ -439,8 +441,10 @@
     }
 
     #fname {
-        top: 40%;
-        left: 4%;
+        top: 26vw;
+        left: 3vw;
+        height: 4vw;
+        font-size: 2vw;
     }
     
     @keyframes fname {
@@ -456,8 +460,10 @@
     }
 
     #lname {
-        left: 24%;
-        top: 40%;
+        top: 26vw;
+        left: 21vw;
+        height: 4vw;
+        font-size: 2vw;
     }
       
     @keyframes lname {
@@ -473,8 +479,10 @@
     }
 
     #email {
-        left: 36%;
-        top: 40%;
+        top: 26vw;
+        left: 29.5vw;
+        height: 4vw;
+        font-size: 2vw;
     }
       
     @keyframes email {
@@ -490,9 +498,10 @@
     }
 
     #message {
-        left: 58%;
-        top: 32.5%;
-        height: 18%;
+        top: 22vw;
+        left: 50vw;
+        height: 13vw;
+        font-size: 2vw;
     }
       
     @keyframes message {
@@ -508,8 +517,10 @@
     }
 
     #submit {
-        left: 13%;
-        top: 79%;
+        top: 54vw;
+        left: 11vw;
+        height: 5vw;
+        font-size: 2vw;
     }
       
     @keyframes submit {
@@ -525,8 +536,9 @@
     }
       
     #linkedin {
-        top: 75.5%;
-        left: 47%;
+        top: 50.5vw;
+        left: 40vw;
+        font-size: 7vw;
     }
     
     @keyframes linkedin {
@@ -539,8 +551,9 @@
     }
 
     #github{
-        top: 36%;
-        left: 11.5%;
+        top: 24.5vw;
+        left: 9.7vw;
+        font-size: 7vw;
     }
       
     @keyframes github {
@@ -553,8 +566,9 @@
     }
       
     #facebook{
-        top: 75.5%;
-        left: 77%;
+        top: 50.5vw;
+        left: 66vw;
+        font-size: 7vw; 
     }
     
     @keyframes facebook {
@@ -567,8 +581,9 @@
     }
 
     #letter{
-        top: 14%;
-        left: 11.5%;
+        top: 9.5vw;
+        left: 9.7vw;
+        font-size: 7vw;
     }
       
     @keyframes mail {
@@ -581,8 +596,9 @@
     }
 
     #phone{
-        top: 57.5%;
-        left: 11.5%;
+        top: 38.5vw;
+        left: 9.7vw;
+        font-size: 7vw;
     }
       
     @keyframes phone {

@@ -47,8 +47,6 @@ const Contact = () => {
         formState: { errors }
     } = useForm()
 
-    console.log(messageWindow)
-
     const onSubmit = (data) => {
         (JSON.stringify(data))
         emailjs.sendForm('Website', 'template_bppwp3r', form.current, import.meta.env.VITE_EMAIL_KEY)
