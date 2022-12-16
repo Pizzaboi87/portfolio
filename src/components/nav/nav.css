@@ -23,7 +23,8 @@ nav ul {
 }
 
 nav > ul > li > a {
-  color: whitesmoke;
+  color: #14145C;
+  text-shadow: 1px 1px rgb(163, 190, 213);
 }
 
 nav > ul > li > a:hover {
