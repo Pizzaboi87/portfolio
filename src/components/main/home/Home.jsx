@@ -45,7 +45,7 @@ const Home = () => {
                     <br />
                     <a className='resume' href='https://www.peterweiser.com/portfolio/resume.pdf' download target='_blank'>
                         <i className='fa-solid fa-laptop-code'></i>
-                        <h5>Download<br />my resume</h5>
+                        <p>Download<br />my resume</p>
                     </a>
                 </div>
             </div> 

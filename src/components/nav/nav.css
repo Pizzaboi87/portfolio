@@ -1,4 +1,4 @@
-nav{
+nav {
   text-align: center;
   margin: 0 auto;
   padding: 1vh 0;
@@ -10,7 +10,7 @@ nav{
   border-radius: 0 0 100% 100%;
 }
   
-nav ul{
+nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -20,6 +20,14 @@ nav ul{
   color: black;
   margin: 0vh 20vw 0 20vw;
   padding: 0;
+}
+
+nav > ul > li > a {
+  color: whitesmoke;
+}
+
+nav > ul > li > a:hover {
+  color: #fc2c39;
 }
 
 @media only screen and (max-width: 1000px) and (orientation: portrait) {

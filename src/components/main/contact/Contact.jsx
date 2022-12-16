@@ -139,25 +139,29 @@ const Contact = () => {
                     <a 
                         href='https://www.linkedin.com/in/peterweiser87'
                         target='_blank' 
-                        rel='noreferrer'>
+                        rel='noreferrer'
+                        title='linkedin.com/in/peterweiser87'>
                         <i id='linkedin' className='contact--item fa-brands fa-linkedin icon logo'></i>
                     </a>
                     <a 
                         href='https://www.facebook.com/peterweiser87' 
                         target='_blank' 
-                        rel='noreferrer'>
+                        rel='noreferrer'
+                        title='facebook.com/peterweiser87'>
                         <i id='facebook' className='contact--item fa-brands fa-square-facebook icon logo'></i>
                     </a>
                     <a 
                         href='https://www.github.com/Pizzaboi87' 
                         target='_blank' 
-                        rel='noreferrer'>
+                        rel='noreferrer'
+                        title='github.com/Pizzaboi87'>
                         <i id='github' className='contact--item fa-brands fa-square-github icon logo'></i>
                     </a>
                     <a 
                         href='mailto:contact@peterweiser.com' 
                         target='_blank' 
-                        rel='noreferrer'>
+                        rel='noreferrer'
+                        title='contact@peterweiser.com'>
                         <i id='letter' className='contact--item fa-solid fa-square-envelope icon logo'></i>
                     </a>
                     <a 
