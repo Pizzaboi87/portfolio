@@ -21,7 +21,7 @@ const Portfolio = () => {
         }
 
         const hideBatman = (e) => {
-            if (e.target !== batman.current && e.target !== callBatman.current) {
+            if (e.target == batman.current && e.target !== callBatman.current) {
                 batman.current.style.display = "none"
                 callBatman.current.removeEventListener('click', jokerEvent)
             }

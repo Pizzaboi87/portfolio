@@ -54,7 +54,7 @@ const About = () => {
     let mobileCards = document.querySelectorAll('.mobilecard')
     if (i <= 1) {
       mobileCards[0].style.display = 'none'
-      mobileCards[mobilcards.length - 1].style.display = 'block'
+      mobileCards[mobileCards.length - 1].style.display = 'block'
       i = mobileCards.length
     } else {
       mobileCards[i-1].style.display = 'none'
