@@ -209,6 +209,7 @@
 
     .details--text {
         font-size: 3vw;
+        padding: 2vw;
     }
 
     .details--text > h2 {

@@ -1,12 +1,11 @@
-import { useEffect, useRef } from 'react'
-import wave2 from '../../../assets/wave2.svg'
 import card_creativity from '../../../assets/card-creativity.webp'
-import card_dev from '../../../assets/card-dev.webp'
 import card_logical from '../../../assets/card-logical.webp'
 import card_main from '../../../assets/card-main.webp'
+import card_dev from '../../../assets/card-dev.webp'
 import card_web from '../../../assets/card-web.webp'
+import wave2 from '../../../assets/wave2.svg'
+import { useEffect } from 'react'
 import './about.css'
-
 
 const About = () => {
 
@@ -63,8 +62,6 @@ const About = () => {
       i--
     }
   }
-
-  
 
   return (
     <section id='about'>

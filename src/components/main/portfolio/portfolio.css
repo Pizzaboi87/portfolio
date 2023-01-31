@@ -1,15 +1,26 @@
 .gallery {
     display: flex;
-    width: 90%;
-    height: 75%;
+    width: 90vw;
+    height: 75vw;
     align-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2vw;
 }
 
+.new::after {
+    content: 'NEW';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    color: yellow;
+    text-align: center;
+    background-color: red;
+    margin-left: 0.5vw;
+}
+
 .gallerydiv {
-    max-width: 30%;
+    max-width: 25vw;
     height: auto;
     font-family: 'Montserrat', sans-serif;
 }
@@ -30,7 +41,7 @@ figure {
 
 .gallerydiv figcaption {
     color: black;
-    padding-bottom: 5px;
+    padding-bottom: 0.6vw;
     text-align: right;
 }
 
@@ -91,6 +102,10 @@ figure {
         margin-top: -15%;
     }
 
+    .new::after {
+        font-size: 3vw;
+    }
+
     .gallerydiv:nth-child(1), .gallerydiv:nth-child(3), .gallerydiv:nth-child(5) {
         transform: translateY(-25%);
     }
@@ -101,7 +116,7 @@ figure {
 
     .gallerydiv {
         max-width: 47%;
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
     
     .batman {

@@ -1,5 +1,5 @@
-import './modal.css'
 import ReactDOM from 'react-dom'
+import './modal.css'
 
 const Modal = ({open, children}) => {
 

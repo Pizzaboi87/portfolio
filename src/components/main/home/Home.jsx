@@ -1,9 +1,9 @@
-import { useEffect, useRef } from 'react'
-import atat from '../../../assets/atat-total.webp'
 import atat_leg from '../../../assets/atat-leg.webp'
-import wave1 from '../../../assets/wave1.svg'
 import laser_one from '../../../assets/laser-1.webp'
 import laser_two from '../../../assets/laser-2.webp'
+import atat from '../../../assets/atat-total.webp'
+import wave1 from '../../../assets/wave1.svg'
+import { useEffect, useRef } from 'react'
 import './home.css'
 
 const Home = () => {
@@ -40,8 +40,8 @@ const Home = () => {
                     <img src={laser_two} ref={laser_second} className='atat laser two' alt='laser' />
                 </div>
                 <div className='text--container'>
-                    <p>I am delighted you visited my personal portfolio website. My name is Peter Weiser. I was born and raised in a little Hungarian town Kisvarda, but at present reside in Athens, Greece. Until the recent past I worked in a customer service center and before that as an account manager, however originally graduated from the University of Kaposvár as an actor. Being a very technical-oriented person, I became interested in web development and began to learn it on my own using various applications and certified online courses.</p>
-                    <p>On the following pages you can find my previous projects and perhaps get to know me a little better through them. I hope you will enjoy your time here and find my work interesting. If so, please contact me. I am looking forward to working together with you in the nearest future.</p>
+                    <p>Welcome to my portfolio website! My name is Peter Weiser and I am a self-taught front-end developer based in Athens, Greece. I have a strong focus on technologies such as React.js, Bootstrap, HTML, CSS, and JavaScript. I have also dabbled in back-end technologies like SQL, Node.js and Express.js. I have used resources like freeCodeCamp, Sololearn, and Udemy to expand my skills and continue learning.</p>
+                    <p>On this site, you'll find a variety of projects I've created, including single page web applications built with React.js and other front-end technologies, fully responsive websites and even a JavaScript game using HTML canvas. Check out my GitHub profile to see the code behind my projects. I'm always looking for new opportunities to grow and learn. Thank you for visiting my portfolio site and I hope you enjoy exploring my work.</p>
                     <br />
                     <a className='resume' href='https://www.peterweiser.com/portfolio/resume.pdf' download target='_blank'>
                         <i className='fa-solid fa-laptop-code'></i>

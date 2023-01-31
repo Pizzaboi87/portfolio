@@ -1,5 +1,5 @@
-import '../portfolio/portfolio.css'
 import Modal from '../../modal/Modal'
+import '../portfolio/portfolio.css'
 import { useState } from 'react'
 
 const Links = (props) => {
@@ -17,7 +17,7 @@ const Links = (props) => {
     return(
         <div className='gallerydiv'>
             <figure onClick={modalOpen}>
-                <figcaption>{props.title}</figcaption>
+                <figcaption className={props.new ? 'new' : null}>{props.title}</figcaption>
                 <img src={props.img_cover} alt={props.alt} />
             </figure>
 

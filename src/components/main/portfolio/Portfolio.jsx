@@ -1,9 +1,9 @@
-import { useEffect, useRef,useState } from 'react'
-import Links from '../links/Links'
-import data from '../links/data'
 import batman_sign from '../../../assets/batman.webp'
 import joker_figure from '../../../assets/joker.webp'
+import { useEffect, useRef,useState } from 'react'
 import wave3 from '../../../assets/wave3.svg'
+import Links from '../links/Links'
+import data from '../links/data'
 import './portfolio.css'
 
 const Portfolio = () => {
@@ -49,6 +49,7 @@ const Portfolio = () => {
             alt={data.alt}
             title={data.title}
             details={data.details}
+            new={data.new}
             setOverlay={setOverlay}
           />
         )

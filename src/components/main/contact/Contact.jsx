@@ -1,15 +1,17 @@
-import wave4 from '../../../assets/wave4.svg'
 import frame_image from '../../../assets/frame-big-final.webp'
 import bag_image from '../../../assets/bag-final.webp'
 import { useEffect, useRef, useState } from 'react'
+import MessageResponse from './MessageResponse'
+import wave4 from '../../../assets/wave4.svg'
 import { useForm } from "react-hook-form"
 import emailjs from '@emailjs/browser'
 import './contact.css'
-import MessageResponse from './MessageResponse'
 
 const Contact = () => {
 
     const [messageWindow, setMessageWindow] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [isWentWrong, setIsWentWrong] = useState(false)
     const open = useRef(null)
     const bag = useRef(null)
     const frame = useRef(null)
@@ -49,11 +51,14 @@ const Contact = () => {
 
     const onSubmit = (data) => {
         (JSON.stringify(data))
+        setIsLoading(true)
+        setMessageWindow(true)
         emailjs.sendForm('Website', 'template_bppwp3r', form.current, import.meta.env.VITE_EMAIL_KEY)
             .then(() => {
-                setMessageWindow(true)
+                setIsLoading(false)
             }, (error) => {
-                alert("Something went wrong, please try again later." + error)
+                setIsLoading(false)
+                setIsWentWrong(true)
             })
     }
 
@@ -75,7 +80,7 @@ const Contact = () => {
                             {...register("firstName", {
                                 required: true,
                                 maxLength: 20,
-                                pattern: /^[A-Za-z]+$/i
+                                pattern: /^[A-Za-z\s']+$/i
                             })}
                         />
 
@@ -92,7 +97,7 @@ const Contact = () => {
                             {...register("lastName", {
                                 required: true,
                                 maxLength: 20,
-                                pattern: /^[A-Za-z]+$/i
+                                pattern: /^[A-Za-z\s']+$/i
                             })}
                         />
 
@@ -126,7 +131,7 @@ const Contact = () => {
                             {...register("message", {
                                 required: true,
                                 maxLength: 300,
-                                pattern: /^[0-9A-Za-z.,!?:;() -\s]+$/i
+                                pattern: /^[0-9A-Za-z.,!?:;() -\s'"]+$/i
                             })}
                         />
 
@@ -175,7 +180,11 @@ const Contact = () => {
             <button ref={open} className='button'>Push</button>
             
             <MessageResponse messageSent={messageWindow} closeWindow={closeWindow}>
-                    <h1>Your message has been sent.</h1>
+                    {isLoading 
+                    ? <h1>Please wait, I will select<br />the right carrier pigeon.</h1>
+                    : isWentWrong
+                    ? <h1>Something went wrong, please try again later.</h1>
+                    : <h1>Your message has been sent.</h1>}
             </MessageResponse>
 
         </section>
