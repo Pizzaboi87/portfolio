@@ -6,7 +6,7 @@ const data = [
     img_cover: "./assets/food-order.webp",
     youTube: "5uNL8vnNPj8",
     alt: "React Native Food Order",
-    title: "React Native Food Order",
+    title: "Food Order App",
     details:
       "This project is a React Native food ordering app with Google login integration, powered by Firebase, Stripe payments, and featuring password reset, order history, address editing, and unique menu generated using Chat GPT. Tested on Android, the app aims to offer a functional, real-life experience in several cities around the world.",
     new: true,
